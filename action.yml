@@ -1,0 +1,30 @@
+name: Build Dataflow flex template
+description: Build dataflow template from a container image created before.
+author: Cristian Rincon
+inputs:
+  GOOGLE_APPLICATION_CREDENTIALS:
+    description: Encoded Google Application Credentials.
+  GCP_PROJECT_ID:
+    description: The GCP project.
+    required: true
+  GCP_CONTAINER_REGISTRY:
+    description: Container Registry where the dataflow images are.
+    required: true
+  GCS_TEMPLATE_LOCATION:
+    description: The bucket and the path where dataflow template will be.
+    required: true
+  IMAGE_NAME:
+    description: The name of the image.
+    required: true
+  IMAGE_VERSION:
+    description: The package version.
+    required: true
+  METADATA_PATH:
+    description: The metadata file path.
+    required: true
+branding:
+  color: 'blue'
+  icon: 'upload-cloud'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
