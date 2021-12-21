@@ -1,4 +1,4 @@
-name: Build Dataflow flex template
+name: Dataflow flex template Builder - GCP
 description: Build dataflow template from a container image created before.
 author: Cristian Rincon
 inputs:
